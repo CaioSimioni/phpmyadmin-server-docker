@@ -3,10 +3,10 @@ services:
     image: mysql:8.0
     container_name: mysql
     environment:
-      MYSQL_ROOT_PASSWORD: root_password
-      MYSQL_DATABASE: database_name
-      MYSQL_USER: user_name
-      MYSQL_PASSWORD: user_password
+      MYSQL_ROOT_PASSWORD: ${ROOT_PASS}
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${USER_NAME}
+      MYSQL_PASSWORD: ${USER_PASS}
     ports:
       - "3306:3306"
     volumes:
@@ -19,7 +19,7 @@ services:
       PMA_HOST: mysql
       PMA_PORT: 3306
     ports:
-      - "8080:80"
+      - "8081:80"
     depends_on:
       - mysql
 
