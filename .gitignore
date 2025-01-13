@@ -3,3 +3,6 @@
 
 # Env
 .env
+
+# MySQL DATA
+mysql_data/
